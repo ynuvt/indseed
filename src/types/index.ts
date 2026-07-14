@@ -76,7 +76,6 @@ export interface UniqueTrackers {
   phones: Set<string>;
   emails: Set<string>;
   fullNames: Set<string>;
-  firstNameCounts: Record<string, number>;
 }
 
 /**

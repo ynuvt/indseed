@@ -41,30 +41,32 @@ export function userFactory(
   const namePool = gender === "male" ? maleFirstNames : femaleFirstNames;
   const regionLastNames = lastNamesByRegion[sd.region] ?? lastNamesByRegion.north;
 
-  let firstName: string;
-  let lastName: string;
-  let fullName: string;
-  let attempts = 0;
+  let firstName = "";
+  let lastName = "";
+  let fullName = "";
+  let success = false;
 
-  do {
+  for (let attempts = 0; attempts < 1000; attempts++) {
     firstName = pick(namePool);
     lastName = pick(regionLastNames);
     fullName = `${firstName} ${lastName}`;
-    attempts++;
 
     if (attempts > 500) {
       // Emergency fallback: add a middle initial to break collisions
       const initial = String.fromCharCode(65 + randInt(0, 25));
       fullName = `${firstName} ${initial}. ${lastName}`;
     }
-  } while (
-    ctx.trackers.fullNames.has(fullName) ||
-    (ctx.trackers.firstNameCounts[firstName] ?? 0) >= 3
-  );
 
-  ctx.trackers.fullNames.add(fullName);
-  ctx.trackers.firstNameCounts[firstName] =
-    (ctx.trackers.firstNameCounts[firstName] ?? 0) + 1;
+    if (!ctx.trackers.fullNames.has(fullName)) {
+      ctx.trackers.fullNames.add(fullName);
+      success = true;
+      break;
+    }
+  }
+
+  if (!success) {
+    throw new Error("Unable to generate a unique full name.");
+  }
 
   // 4. Age & Date of Birth
   const age = generateAge(ctx.options.averageAge);
@@ -74,7 +76,7 @@ export function userFactory(
   let phone: string;
   do {
     const prefix = pick(VALID_PREFIXES);
-    const rest = String(randInt(100000000, 999999999)).padStart(9, "0");
+    const rest = String(ctx.trackers.phones.size + 1).padStart(9, "0");
     phone = `+91${prefix}${rest}`;
   } while (ctx.trackers.phones.has(phone));
   ctx.trackers.phones.add(phone);
@@ -84,7 +86,7 @@ export function userFactory(
   const lnClean = lastName.toLowerCase().replace(/[^a-z]/g, "");
   let email: string;
   do {
-    const num = randInt(1, 999);
+    const num = ctx.trackers.emails.size + 1;
     const domain = pick(EMAIL_DOMAINS);
     email = `${fnClean}.${lnClean}${num}@${domain}`;
   } while (ctx.trackers.emails.has(email));

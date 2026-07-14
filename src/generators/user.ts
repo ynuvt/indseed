@@ -19,7 +19,6 @@ const DEFAULT_OPTIONS: Required<GenerateUsersOptions> = {
  *
  * Guarantees:
  * - Every `id`, `email`, `phone`, and `fullName` is unique.
- * - No first name appears more than 3 times.
  * - Age average matches the provided `averageAge` (default 28).
  * - Every `dateOfBirth` exactly matches the `age` against today's date.
  * - If no `state` is provided, all 30 Indian states/UTs are represented using
@@ -42,7 +41,6 @@ export function generateUsers(options?: GenerateUsersOptions): User[] {
       phones: new Set(),
       emails: new Set(),
       fullNames: new Set(),
-      firstNameCounts: {},
     },
   };
 
