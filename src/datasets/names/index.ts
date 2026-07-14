@@ -1,0 +1,42 @@
+/** Realistic Indian male first names (200 entries). */
+export const maleFirstNames: readonly string[] = [
+  "Aarav","Aarush","Abhinav","Adarsh","Aditya","Ajay","Akash","Akhil","Akshay","Amandeep",
+  "Amit","Amrit","Anand","Aniket","Anil","Anish","Ankur","Anoop","Ansh","Arjun",
+  "Arnav","Arun","Ashish","Ashok","Atharv","Atul","Avneet","Baldev","Bharat","Bhaskar",
+  "Bikram","Chandan","Chirag","Darpan","Darshan","Deepak","Devendra","Dhruv","Dinesh","Dipak",
+  "Ekansh","Farhan","Gaurav","Gautam","Girish","Gopal","Govind","Gururaj","Hari","Harish",
+  "Harpreet","Harsh","Hemant","Himanshu","Hitesh","Ishan","Ishwar","Jagdish","Jatin","Jayant",
+  "Jayesh","Jitendra","Kailash","Karan","Kartik","Kaushik","Keshav","Kishore","Krishna","Kumar",
+  "Kunal","Lakshman","Lalit","Madhav","Mahesh","Manas","Manav","Manish","Manoj","Milan",
+  "Mohit","Mohan","Mukesh","Murugan","Nakul","Naman","Nandish","Narayan","Naveen","Neeraj",
+  "Nikhil","Niraj","Nishant","Nitesh","Nitin","Omkar","Pankaj","Paras","Parth","Pavan",
+  "Piyush","Pradeep","Prakash","Pranav","Prasad","Prashant","Pratik","Praveen","Pritam","Puneet",
+  "Raghav","Rahul","Raj","Rajat","Rajesh","Rajiv","Rakesh","Raman","Ramesh","Ranveer",
+  "Ravi","Ravindra","Ritesh","Rohan","Rohit","Rupesh","Sachin","Sagar","Sahil","Sameer",
+  "Sandeep","Sanjay","Sanjit","Santosh","Sarath","Saurabh","Shankar","Shashank","Shekhar","Shivam",
+  "Shubham","Siddarth","Sourav","Subhash","Sudhir","Sumit","Sunil","Suraj","Suresh","Surya",
+  "Tanmay","Tarun","Tushar","Uday","Ujjwal","Umesh","Vaibhav","Varun","Venkat","Vijay",
+  "Vikas","Vikram","Vinay","Vinod","Vipin","Viral","Vishnu","Vivek","Yash","Yogesh",
+  "Zubair","Faiz","Imran","Irfan","Junaid","Kabir","Karim","Nawab","Rehan","Rizwan",
+  "Saif","Samad","Shahid","Tariq","Waqar","Arif","Danish","Faisal","Nadeem","Rashid",
+];
+
+/** Realistic Indian female first names (200 entries). */
+export const femaleFirstNames: readonly string[] = [
+  "Aanya","Aaradhya","Aashna","Aditi","Akshara","Amrita","Ananya","Anika","Anita","Anjali",
+  "Anushka","Aparna","Archana","Arundhati","Ashwini","Avani","Ayesha","Bhavana","Bhavika","Bindu",
+  "Chandni","Charita","Charu","Daksha","Deepa","Deepika","Devika","Dhanya","Disha","Divya",
+  "Durga","Ekta","Esha","Fatima","Gauri","Gayatri","Geeta","Gita","Hema","Himani",
+  "Indira","Isha","Ishita","Jaya","Jayanti","Jyoti","Kajal","Kamala","Kanchan","Kavita",
+  "Keerthana","Khushi","Kiran","Komal","Kriti","Lakshmi","Lata","Lavanya","Leela","Madhuri",
+  "Malini","Mamta","Manasi","Manisha","Meena","Meera","Megha","Mira","Mitali","Mohini",
+  "Mona","Nalini","Namrata","Nandini","Neelam","Neetha","Neha","Nikita","Nisha","Nithya",
+  "Padma","Pallavi","Parvati","Pooja","Poonam","Prachi","Pragya","Pratibha","Preeti","Priya",
+  "Priyanka","Purnima","Radha","Ragini","Rajeshwari","Rashmi","Rati","Rekha","Renuka","Revathi",
+  "Ritu","Riya","Rohini","Roopa","Rukmini","Rupa","Sabina","Sakshi","Sangeeta","Sanjana",
+  "Sarita","Savita","Seema","Shanti","Sharmila","Shilpa","Shraddha","Shreya","Shweta","Simran",
+  "Sita","Smita","Sneha","Sonali","Sonia","Subha","Sudha","Sujata","Sumitra","Sunita",
+  "Supriya","Sushma","Swati","Tanvi","Tara","Tina","Tulsi","Uma","Usha","Vandana",
+  "Vanita","Varsha","Vasudha","Veena","Vidya","Vimala","Vineeta","Yamini","Yasmin","Zara",
+  "Zubaida","Farzana","Hina","Nazia","Rukhsar","Shabana","Tahira","Maria","Teresa","Diana",
+];

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.js
+!validate.js
+data.json
+.DS_Store
+*.tgz

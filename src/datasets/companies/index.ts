@@ -1,0 +1,21 @@
+/** Realistic Indian companies and organisations. */
+export const companies: readonly string[] = [
+  "TCS", "Infosys", "Wipro", "Accenture", "Reliance Industries",
+  "Tata Motors", "Mahindra & Mahindra", "HCL Technologies", "Tech Mahindra",
+  "Zoho", "Freshworks", "Swiggy", "Zomato", "Blinkit",
+  "ICICI Bank", "HDFC Bank", "Axis Bank", "L&T", "Cognizant", "Capgemini",
+  "Flipkart", "Amazon India", "Google India", "Microsoft India", "Adobe India",
+  "Oracle India", "SAP India", "IBM India", "Deloitte India", "KPMG India",
+  "EY India", "PwC India", "McKinsey India", "BCG India", "Bajaj Auto",
+  "Hero MotoCorp", "Maruti Suzuki", "Hindustan Unilever", "ITC Limited", "Nestle India",
+  "Bharti Airtel", "Jio", "Vodafone Idea", "BSNL", "State Bank of India",
+  "Kotak Mahindra Bank", "IndusInd Bank", "Yes Bank", "Punjab National Bank", "Bank of Baroda",
+  "Cipla", "Sun Pharma", "Dr. Reddy's Laboratories", "Lupin", "Biocon",
+  "Apollo Hospitals", "Fortis Healthcare", "Max Healthcare", "Manipal Hospitals",
+  "Byju's", "Unacademy", "PhonePe", "Paytm", "Razorpay", "Ola", "Uber India",
+  "Delhivery", "BlueDart", "DTDC", "Godrej", "Asian Paints", "Pidilite Industries",
+  "Titan Company", "Tanishq", "Raymond", "Allen Solly", "Fabindia",
+  "BigBasket", "Dunzo", "Meesho", "Lenskart", "Nykaa", "PolicyBazaar",
+  "Dream11", "CRED", "Groww", "Zerodha", "Upstox", "ShareChat", "Curefit",
+  "Practo", "1mg", "Vedantu", "Simplilearn", "upGrad",
+];
