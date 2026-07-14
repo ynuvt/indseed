@@ -1,34 +1,28 @@
-# IndSeed 🇮🇳
+# IndSeed
 
-> Generate realistic synthetic Indian user data for development, testing, and database seeding.
+Generate realistic synthetic Indian user data for development, testing, and database seeding.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![TypeScript](https://img.shields.io/badge/Built%20With-TypeScript-3178C6)
-![Node](https://img.shields.io/badge/Node.js-18%2B-green)
-
-> ⚠️ **IndSeed generates purely synthetic data for development and testing. No real person's personal information is used or stored.**
+> IndSeed generates synthetic data only. No real person's personal information is used or stored.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🇮🇳 India-first synthetic user generation
-- ⚡ Generate thousands of users on demand
-- 📍 Real Indian cities, districts, states and pincodes
-- 👤 Regionally consistent names and surnames
-- 🗣️ State-based language mapping
-- 👥 Configurable gender distribution
-- 🎂 Configurable average age
-- 🏢 Realistic Indian companies and occupations
-- 📧 Unique email generation
-- 📱 Unique phone number generation
-- 🆔 UUID v4 identifiers
-- 💯 TypeScript support
-- 📦 Lightweight and easy to use
+- India-first synthetic user generation
+- Generate thousands of users on demand
+- Regionally consistent names and surnames
+- Real Indian cities, districts, states and pincodes
+- State-aware language mapping
+- Configurable gender distribution
+- Configurable average age
+- Realistic Indian companies and occupations
+- Unique UUIDs, emails and phone numbers
+- Written in TypeScript
+- Lightweight with zero runtime dependencies
 
 ---
 
-# 📦 Installation
+## Installation
 
 ```bash
 npm install indseed
@@ -36,7 +30,7 @@ npm install indseed
 
 ---
 
-# 🚀 Quick Start
+## Quick Start
 
 ```ts
 import { generateUsers } from "indseed";
@@ -46,7 +40,7 @@ const users = generateUsers();
 console.log(users[0]);
 ```
 
-Example Output
+Example
 
 ```ts
 {
@@ -72,7 +66,11 @@ Example Output
 
 ---
 
-# ⚙️ Options
+## API
+
+### `generateUsers(options?)`
+
+Returns an array of synthetic Indian users.
 
 ```ts
 const users = generateUsers({
@@ -88,24 +86,18 @@ const users = generateUsers({
 
 ---
 
-# 📖 API
-
-## `generateUsers(options?)`
-
-Returns an array of synthetic Indian users.
-
-### Options
+## Options
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | `count` | `number` | `1000` | Number of users to generate |
-| `gender` | `{ male: number; female: number }` | `{ male: 52, female: 48 }` | Gender ratio (must total 100) |
+| `gender` | `{ male: number; female: number }` | `{ male: 52, female: 48 }` | Gender ratio |
 | `averageAge` | `number` | `28` | Target average age |
-| `state` | `string` | Random | Restrict users to one Indian state |
+| `state` | `string` | Random | Restrict generation to one state |
 
 ---
 
-# 👤 User Schema
+## User Schema
 
 | Field | Type | Description |
 |------|------|-------------|
@@ -115,21 +107,21 @@ Returns an array of synthetic Indian users.
 | `fullName` | `string` | Full name |
 | `gender` | `"male" \| "female"` | Gender |
 | `dateOfBirth` | `string` | YYYY-MM-DD |
-| `age` | `number` | Generated age |
-| `phone` | `string` | Indian phone number |
+| `age` | `number` | Age |
+| `phone` | `string` | Indian mobile number |
 | `email` | `string` | Unique email |
-| `city` | `string` | Indian city |
+| `city` | `string` | City |
 | `district` | `string` | District |
-| `state` | `string` | Indian state |
-| `pincode` | `string` | Indian pincode |
+| `state` | `string` | State |
+| `pincode` | `string` | Pincode |
 | `language` | `string` | Primary language |
 | `occupation` | `string` | Occupation |
-| `company` | `string \| null` | Company name |
+| `company` | `string \| null` | Company |
 | `profilePhoto` | `null` | Reserved for future use |
 
 ---
 
-# 💡 Examples
+## Examples
 
 Generate 100 users
 
@@ -139,7 +131,7 @@ const users = generateUsers({
 });
 ```
 
-Generate users only from Maharashtra
+Generate users from Maharashtra
 
 ```ts
 const users = generateUsers({
@@ -171,80 +163,43 @@ const users = generateUsers({
 
 ---
 
-# 📁 Project Structure
+## Project Structure
 
 ```text
 indseed/
 ├── src/
-│
-├── datasets/
-│   ├── names/
-│   ├── surnames/
-│   ├── cities/
-│   ├── companies/
-│   └── occupations/
-│
-├── factories/
-│   └── userFactory.ts
-│
-├── generators/
-│   └── user.ts
-│
-├── utils/
-│
-├── types/
-│
-└── index.ts
+│   ├── datasets/
+│   ├── factories/
+│   │   └── userFactory.ts
+│   ├── generators/
+│   │   └── user.ts
+│   ├── utils/
+│   ├── types/
+│   └── index.ts
+├── README.md
+├── LICENSE
+├── package.json
+└── tsconfig.json
 ```
 
 ---
 
-# 🗺️ Roadmap
+## Contributing
 
-## v0.1.0
+Contributions are welcome.
 
-- ✅ Indian user generation
-- ✅ Regional consistency
-- ✅ TypeScript support
-- ✅ Configurable generation
-- ✅ State filtering
-
-## Upcoming
-
-- SQLite helper
-- PostgreSQL helper
-- Prisma seeding
-- Drizzle ORM support
-- MongoDB helper
-- CSV export
-- SQL export
-- Student profiles
-- Employee profiles
-- Restaurant datasets
-- Hospital datasets
-- E-commerce datasets
-- Faker compatibility layer
+If you'd like to improve datasets, add features, or report bugs, feel free to open an issue or pull request.
 
 ---
 
-# 🤝 Contributing
+## License
 
-Contributions are welcome!
-
-If you'd like to improve datasets, add features, or report bugs, feel free to open an Issue or Pull Request.
+MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
-See the [LICENSE](LICENSE) file for more details.
-
----
-
-## ⚠️ Disclaimer
+## Disclaimer
 
 IndSeed generates synthetic data for software development and testing.
 
-The generated records are intended to resemble realistic Indian data but are **not based on or intended to identify any real individual**. Any resemblance to actual persons is purely coincidental.
+The generated records are intended to resemble realistic Indian data but are not based on or intended to identify any real individual. Any resemblance to actual persons is purely coincidental.
